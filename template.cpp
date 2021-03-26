@@ -39,6 +39,9 @@ using namespace __gnu_pbds;
 #define PI                          3.1415926535897932384626
 #define INF                         1e18
 #define EPS                         1e-9
+#define change                      show = !show
+
+bool show = true;
 
 const int fx[4][2] = {{0,1}, {0,-1}, {1,0}, {-1,0}}; 
 const int fxx[8][2] = {{0,1}, {0,-1}, {1,0}, {-1,0}, {1,1}, {1,-1}, {-1,1}, {-1,-1}};
@@ -52,15 +55,24 @@ template<typename T>
 inline std::ostream &operator << (std::ostream & os,const std::vector<T>& v)
 {
     bool first = true;
-    os << "";
+    if(show)
+        os << "[";
     for(unsigned int i = 0; i < v.size(); i++)
     {
         if(!first)
-            os << " ";
+        {
+            if(show)
+                os << ", ";
+            else
+                os << " ";
+        }
         os << v[i];
         first = false;
     }
-    return os << "";
+    if(show)
+        return os << "]\n";
+    else
+        return os << "\n";
 }
 template<typename T>
 inline std::ostream &operator << (std::ostream & os,const std::set<T>& v)
