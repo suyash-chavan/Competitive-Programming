@@ -35,7 +35,7 @@ using namespace __gnu_pbds;
 #define fast_io                     ios_base::sync_with_stdio(false);\
                                     cin.tie(NULL)
 #define file_in                     freopen("input.txt", "r", stdin)
-#define file_out                    reopen("output.txt", "w", stdout)
+#define file_out                    freopen("output.txt", "w", stdout)
 #define PI                          3.1415926535897932384626
 #define INF                         1e18
 #define EPS                         1e-9
