@@ -2,7 +2,6 @@
 
 ### Vector
 ```
-
 push_back       -         O(1)
 
 sort            -         O(NlogN)
@@ -16,7 +15,6 @@ size            -         O(1)
 clear           -         O(N)
 
 erase           -         O(N)
-
 ```
 
 Function | Time Complexity
