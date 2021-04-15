@@ -1,6 +1,6 @@
 # Containers and their Time Complexities 
 
-## Vector
+### Vectors
 
 Function | Time Complexity
 -------- | -------------
