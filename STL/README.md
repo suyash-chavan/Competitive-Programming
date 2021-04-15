@@ -1,6 +1,7 @@
 # Containers and their Time Complexities 
 
 ### Vector
+```
 * push_back       -         O(1)
 * sort            -         O(NlogN)
 * reverse         -         O(N)
@@ -8,3 +9,4 @@
 * size            -         O(1)
 * clear           -         O(N)
 * erase           -         O(N)
+```
