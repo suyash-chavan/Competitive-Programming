@@ -1,9 +1,7 @@
-# Advanced Data Structures - Usage
+# Advanced Data Structures - Remember
 
 ### Segment Trees
-* Range Max and Update Queries - Online
+* Focus on state of sub-problem that a single node should solve.
+* Build Complexity - O(N x Merge_Complexity)
 
 ### Fenwick Tree
-* Point Update and Range Query - Online
-* Range Update and Point Query - Online
-* Range Update and Range Query - Online
