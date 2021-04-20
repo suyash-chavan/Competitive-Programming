@@ -21,7 +21,7 @@ struct seg_node {
 
 vector<seg_node> seg_tree(4 * MAXN);
 
-seg_node create_leaf(ll in)
+seg_node create_leaf(long long in)
 {
     seg_node leaf;
 
@@ -30,14 +30,14 @@ seg_node create_leaf(ll in)
     return leaf;
 }
 
-void merge(ll node, ll left, ll right)
+void merge(long long node, long long left, long long right)
 {
     // Merge the nodes
 
     return ;
 }
 
-void build(ll in, ll s, ll e, ll l, ll r)
+void build(long long in, long long s, long long e, long long l, long long r)
 {
     if (s == e)
     {
@@ -46,7 +46,7 @@ void build(ll in, ll s, ll e, ll l, ll r)
         return ;
     }
 
-    ll mid = (s + e) / 2;
+    long long mid = (s + e) / 2;
 
     build(2 * in, s, mid, l, r);
     build(2 * in + 1, mid + 1, e, l, r);
@@ -56,7 +56,7 @@ void build(ll in, ll s, ll e, ll l, ll r)
     return ;
 }
 
-void query(ll in, ll s, ll e, ll l, ll r)       // Can be modified as we want
+void query(long long in, long long s, long long e, long long l, long long r)       // Can be modified as we want
 {
     if (e < l || r < s)
         return ;
@@ -67,7 +67,7 @@ void query(ll in, ll s, ll e, ll l, ll r)       // Can be modified as we want
         return ;
     }
 
-    ll mid = (s + e) / 2;
+    long long mid = (s + e) / 2;
 
     query(2 * in, s, mid, l, r);
 
@@ -76,7 +76,7 @@ void query(ll in, ll s, ll e, ll l, ll r)       // Can be modified as we want
     return ;
 }
 
-void update(ll in, ll s, ll e, ll pos, ll val)  // Can be modified as we want
+void update(long long in, long long s, long long e, long long pos, long long val)  // Can be modified as we want
 {
     if (s == e)
     {
@@ -84,7 +84,7 @@ void update(ll in, ll s, ll e, ll pos, ll val)  // Can be modified as we want
         return ;
     }
 
-    ll mid = (s + e) / 2;
+    long long mid = (s + e) / 2;
 
     if (pos <= mid)
         update(2 * in, s, mid, pos, val);
@@ -92,4 +92,6 @@ void update(ll in, ll s, ll e, ll pos, ll val)  // Can be modified as we want
         update(2 * in + 1, mid + 1, e, pos, val);
 
     merge(in, 2 * in, 2 * in + 1);
+
+    return ;
 }
