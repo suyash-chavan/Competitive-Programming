@@ -7,3 +7,8 @@
 * We should be solve every query in O(logN) complexity.
 
 ### Fenwick Tree
+
+### Binary Lifting
+* Used on trees for efficient jumping(DP)
+* Build Complexity - O(NlogN)
+* Query Complexity - O(logN)
