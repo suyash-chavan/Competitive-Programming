@@ -12,3 +12,6 @@
 ### Segment Tree
 * https://codeforces.com/blog/entry/15890
 * https://codeforces.com/blog/entry/18051
+
+### Binary Lifting
+* https://www.youtube.com/watch?v=FAfSArGC8KY
