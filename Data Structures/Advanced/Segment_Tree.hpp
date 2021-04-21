@@ -13,11 +13,11 @@
 */
 
 
-struct seg_node {
+typedef struct seg_node {
 
     // Properties of node
 
-};
+} seg_node;
 
 vector<seg_node> seg_tree(4 * MAXN);
 
