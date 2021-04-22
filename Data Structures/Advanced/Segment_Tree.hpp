@@ -37,7 +37,7 @@ void merge(long long node, long long left, long long right)
     return ;
 }
 
-void build(long long in, long long s, long long e, long long l, long long r)
+void build(long long in, long long s, long long e)
 {
     if (s == e)
     {
@@ -48,8 +48,8 @@ void build(long long in, long long s, long long e, long long l, long long r)
 
     long long mid = (s + e) / 2;
 
-    build(2 * in, s, mid, l, r);
-    build(2 * in + 1, mid + 1, e, l, r);
+    build(2 * in, s, mid);
+    build(2 * in + 1, mid + 1, e);
 
     merge(in, 2 * in, 2 * in + 1);
 
