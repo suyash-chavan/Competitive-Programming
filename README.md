@@ -15,3 +15,4 @@
 
 ### Binary Lifting
 * https://www.youtube.com/watch?v=FAfSArGC8KY
+* https://codeforces.com/blog/entry/74847
