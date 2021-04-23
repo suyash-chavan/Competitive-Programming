@@ -1,4 +1,1 @@
 # Dynamic Programming
-```
-Important Topic
-```
