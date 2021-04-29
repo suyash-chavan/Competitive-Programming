@@ -9,7 +9,7 @@
                |___/                                                       
 */
 
-// Precompute gactorial and inverse factorial in O(N) and then calculate nCr and nPr in O(1). 
+// Precompute factorial and inverse factorial in O(N) and then calculate nCr and nPr in O(1). 
 
 #define MAXN 100005
 #define mod 1000000007
