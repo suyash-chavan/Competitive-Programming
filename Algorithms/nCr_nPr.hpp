@@ -1,15 +1,4 @@
-/*
-   _____                       _        _____ _                            
-  / ____|                     | |      / ____| |                           
- | (___  _   _ _   _  __ _ ___| |__   | |    | |__   __ ___   ____ _ _ __  
-  \___ \| | | | | | |/ _` / __| '_ \  | |    | '_ \ / _` \ \ / / _` | '_ \ 
-  ____) | |_| | |_| | (_| \__ \ | | | | |____| | | | (_| |\ V / (_| | | | |
- |_____/ \__,_|\__, |\__,_|___/_| |_|  \_____|_| |_|\__,_| \_/ \__,_|_| |_|
-                __/ |                                                      
-               |___/                                                       
-*/
-
-// Precompute factorial and inverse factorial in O(N) and then calculate nCr and nPr in O(1). 
+// Precompute factorial and inverse factorial in O(N) and then calculate nCr and nPr in O(1).
 
 #define MAXN 100005
 #define mod 1000000007
@@ -26,7 +15,6 @@ long long nPr(long long n, long long r)
     return ((inverse_factorial[n - r] * factorial[n]) % mod);
 }
 
-
 long long nCr(long long n, long long r)
 {
     if (r > n)
@@ -34,7 +22,6 @@ long long nCr(long long n, long long r)
 
     return (((inverse_factorial[r] * inverse_factorial[n - r]) % mod) * factorial[n]) % mod;
 }
-
 
 void pre()
 {
@@ -56,5 +43,4 @@ void pre()
 
     for (long long i = 2; i < MAXN; i++)
         inverse_factorial[i] = (token[i] * inverse_factorial[i - 1]) % mod;
-
 }

@@ -1,38 +1,26 @@
-/*
-
-   _____                       _        _____ _                            
-  / ____|                     | |      / ____| |                           
- | (___  _   _ _   _  __ _ ___| |__   | |    | |__   __ ___   ____ _ _ __  
-  \___ \| | | | | | |/ _` / __| '_ \  | |    | '_ \ / _` \ \ / / _` | '_ \ 
-  ____) | |_| | |_| | (_| \__ \ | | | | |____| | | | (_| |\ V / (_| | | | |
- |_____/ \__,_|\__, |\__,_|___/_| |_|  \_____|_| |_|\__,_| \_/ \__,_|_| |_|
-                __/ |                                                      
-               |___/                                                       
-
-
-*/
-
 // Simple Prime Test
 
-bool isPrime(int x) {
-    for (int d = 2; d * d <= x; d++) {
+bool isPrime(int x)
+{
+    for (int d = 2; d * d <= x; d++)
+    {
         if (x % d == 0)
             return false;
     }
     return true;
 }
 
-
-
 // For 64 bit Integers
 
 using u64 = uint64_t;
 using u128 = __uint128_t;
 
-u64 binpower(u64 base, u64 e, u64 mod) {
+u64 binpower(u64 base, u64 e, u64 mod)
+{
     u64 result = 1;
     base %= mod;
-    while (e) {
+    while (e)
+    {
         if (e & 1)
             result = (u128)result * base % mod;
         base = (u128)base * base % mod;
@@ -41,11 +29,13 @@ u64 binpower(u64 base, u64 e, u64 mod) {
     return result;
 }
 
-bool check_composite(u64 n, u64 a, u64 d, int s) {
+bool check_composite(u64 n, u64 a, u64 d, int s)
+{
     u64 x = binpower(a, d, n);
     if (x == 1 || x == n - 1)
         return false;
-    for (int r = 1; r < s; r++) {
+    for (int r = 1; r < s; r++)
+    {
         x = (u128)x * x % n;
         if (x == n - 1)
             return false;
@@ -53,18 +43,21 @@ bool check_composite(u64 n, u64 a, u64 d, int s) {
     return true;
 };
 
-bool MillerRabin(u64 n) { // returns true if n is prime, else returns false.
+bool MillerRabin(u64 n)
+{ // returns true if n is prime, else returns false.
     if (n < 2)
         return false;
 
     int r = 0;
     u64 d = n - 1;
-    while ((d & 1) == 0) {
+    while ((d & 1) == 0)
+    {
         d >>= 1;
         r++;
     }
 
-    for (int a : {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37}) {
+    for (int a : {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37})
+    {
         if (n == a)
             return true;
         if (check_composite(n, a, d, r))
